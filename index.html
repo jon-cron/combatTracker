@@ -37,9 +37,23 @@
       </nav>
     </header>
     <main>
+      <section class="row justify-content-end">
+        <div class="col-12 col-md-4 shadow p-1">
+          <form action="" onsubmit="app.characterController.createCharacter()">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="name"
+            />
+            <button class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </section>
       <div class="container-fluid">
         <div class="row justify-content-center">
-          <div class="col-12 col-md-7">
+          <div class="col-12 col-md-7" id="player">
             <!-- SECTION template below -->
             <!-- <div class="d-flex shadow p-2 m-2 justify-content-center">
               <h2 class="p-1 m-1">Name</h2>
