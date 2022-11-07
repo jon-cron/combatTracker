@@ -22,3 +22,16 @@ export const appState = new Proxy(new AppState(), {
 });
 
 characters = [new Character("Noah", 0), new Character("Bob", 0)];
+
+export const appState = new Proxy(new AppState(), {
+  get(target, prop) {
+    isValidProp(target,prop)
+    return target[prop]
+  }
+  set(target, prop, values){
+    isValidProp(target, prop)
+    target[prop] = value
+    target.emit(prop, value)
+    return true
+  }
+})
